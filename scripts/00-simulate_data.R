@@ -1,11 +1,11 @@
 #### Preamble ####
 # Purpose: Simulates an analysis dataset about Pokemon level and weaknesses
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Kyungrok Park 
+# Date: 26 Mar 2024
+# Contact: kyungrok.park@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+# Any other information needed?
 
 
 #### Workspace setup ####
