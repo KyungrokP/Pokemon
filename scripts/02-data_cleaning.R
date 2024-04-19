@@ -1,11 +1,9 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
+# Purpose: Cleans the raw plane data recorded by Statistics Canada
 # Author: Kyungrok Park
 # Date: 1 April 2024
 # Contact: kyungrok.park@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
 
 #### Workspace setup ####
 library(tidyverse)
