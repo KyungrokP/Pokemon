@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Models linear regression model for GNI/GDP/Nominal share and R&D expenditure
+# Purpose: Perform and save linear regression models for GNI/GDP/Nominal share and R&D expenditure
 # Author: Kyungrok Park
 # Date: 14 April 2024
 # Contact: kyungrok.park@mail.utoronto.ca
