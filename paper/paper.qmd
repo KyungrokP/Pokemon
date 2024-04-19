@@ -38,8 +38,8 @@ revolutions have occurred in diverse industries worldwide. This has
 underscored the importance of investment in scientific technology,
 leading not only OECD countries but also nations globally to prioritize
 scientific technological investment. A significant aspect of scientific
-technological investment is expenditure. Among these, annual R&D budgets
-signify a country's dedication to scientific technological investment.
+technological investment is the distribution of expenditure. Among these, annual R&D budgets
+signify a country's dedication to scientific technological investment of each year.
 Despite the OECD's average R&D expenditure as a percentage of total GDP
 showing a slightly lower percentage of 2.718% in 2022 compared to 2.741%
 in 2021 (OECD, 2023), it has exhibited a steady upward trend since 2000.
@@ -98,15 +98,16 @@ The Expenditure Approach used to calculate GDP, as depicted in the
 equation above, sums up a country's total Consumption (C), Investment
 (I),Government Spending (G), and Net Exports (X-M). Additionally, GNI
 includes income from abroad, added to domestic income, resulting in
-GDP + Income from abroad. This means that while GDP growth reflects
-overall economic growth within a country, GNI growth also encompasses
-the growth of nationals and companies operating abroad. Therefore, while
-GDP growth signifies domestic growth, GNI growth reflects the overall
-growth and well-being of the nation. Additionally, the relationship
-between R&D expenditure and GDP growth will reveal the connection
+GDP + Income from abroad. Therefore, while GDP growth signifies domestic growth, GNI growth reflects the overall
+growth and well-being of the nation.
+Thus, the relationship between R&D expenditure and GDP growth will reveal the connection
 between R&D expenditure and domestic economic growth, while the
 relationship between R&D expenditure and GNI growth will illustrate the
 broader implications for overall country development and well-being.
+
+The data is directly downloaded from Statistics Canada portal, and three data sets, GDP Growth Data, GNI Growth Data and R&D Expenditure data, are utilized. The detailed information of dataset is described below, and the raw data can be seen by following the url in reference section 
+Data, cleaning and analysis was processed through software R program (R core team, 2023), tidyverse(Wickham et al. 2019), ggplot2(Wickham, 2016), janitor(Sam Firke, 2023), tibble(Müller and Wickham, 2023), readr(Wickham et al. 2024) and here(Kirill Müller, 2020).
+Especially, the linear regression analysis was done by utilizing rstanarm(Ben et al. 2024) package, and the coversion of csv files for raw data to parquet files was processed through using arrow(Neal et al. 2024) package.
 
 ## GDP Growth Data
 
