@@ -10,14 +10,14 @@
 
 #### Workspace setup ####
 library(tidyverse)
-
+library(here)
 #### Test data ####
 research_budget <- 
-  read_csv("data/analysis_data/research_budget.csv")
+  read_csv(here("data/analysis_data/research_budget.csv"))
 GDP_data.csv <- 
-  read_csv("data/analysis_data/yearly_GDP_data.csv")
+  read_csv(here("data/analysis_data/yearly_GDP_data.csv"))
 GNI_data.csv <- 
-  read_csv("data/analysis_data/yearly_GNI_data.csv")
+  read_csv(here("data/analysis_data/yearly_GNI_data.csv"))
 
 #### Test data ####
 # test whether the year starts from 2000 for all three datasets
