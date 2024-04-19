@@ -1,12 +1,12 @@
 ---
 title: "Exploring the Relationship between Research and Development (R&D) Expenditure and Economic Growth."
-subtitle: ": An Investigation of GNI and GDP Growth with R&D Expenditure in Canadian Data from 2001 to 2022"
+subtitle: ": An Investigation of GNI and GDP Growth with R&D Expenditure in Canadian Data from 2001 to 2023"
 author: 
   - Kyungrok Park 
 thanks: "Code and data are available at: https://github.com/KyungrokP/Research_budget_and_GNI_relation."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This paper investigates the relationship between Canada's economic growth and R&D expenditure from 2001 to 2023, utilizing data from Statistics Canada. The results of the study indicated that the relationship between Canada's annual R&D expenditure and GDP/GNI growth, as determined through linear regression analysis, was statistically insignificant. Additionally, it was concluded that there exists a negative correlation between nominal share and GDP growth. These insignificant results and negative correlation were explained due to a possible lag effects and issues with R&D budgeting. Additionally, these findings were further justified by referencing the common research results of Kadir, Emir, and Hakan."
 format: pdf
 toc: true
 number-sections: true
@@ -291,12 +291,15 @@ ggplot(data = research_budget, aes(x = year, y = change_rate)) +
 ```
 
 ## Nominal Share
+In addition to the three mentioned data sets above, this study also introduced the nominal share by year. The nominal share refers to the proportion of R&D expenditure relative to the total GDP of the country. If there are years with higher nominal shares, it indicates a greater proportion or contribution to R&D expenditure of the country in that year. @tbl-ns presents the nominal share of Canada from 2000 to 2005. Through these nominal shares, a more precise understanding of Canada's annual contribution to R&D can be obtained, and this will be utilized to assess its correlation with economic growth.
 
 ```{r}
 #| echo: false
 #| eval: true
 #| warning: false
 #| message: false
+#| tbl-cap: Nominal share of Canada between 2000 to 2005
+#| label: tbl-ns
 research_budget <- read_csv(here("data/analysis_data/research_budget.csv"))
 GDP_data <- read_csv(here("data/analysis_data/yearly_GDP_data.csv"))
 
@@ -316,7 +319,6 @@ combined_data <- tibble(
 )
 kable(head(combined_data), col.names = c("Year", "Total GDP (million CA $)", "Total R&D expenditure (million CA $)", "nominal share (%)"))
 ```
-
 \newpage
 
 # Model
@@ -409,19 +411,28 @@ section.
 # Discussion
 
 ## Lag effects
-R&D expenditure is known to have a quantitative relationship with a country's Total Factor Productivity (TFP) (Zhou&Xia, 2010). However, it is understood that the increase in TFP takes considerable time, leading to long-term growth in a country's GDP/GNI due to the lag effect of TFP. Since this study analyzed the relationship between R&D expenditure and economic growth for each year, it is not immune to the influence of such lag effects. 
-In this research, the results of Models 1 and 2 have already indicated that the relationship between R&D expenditure and GNI/GDP growth is not significant. In addition,the negative relationship between nominal share and GDP growth is identified. the results of these three models collectively prove that there is no year-by-year relationship between R&D expenditure and economic growth, possibly due to lag effects. Moreover, Canada ranks 6th in the OECD, indicating a high convergence rate. This further underscores that while R&D investment may have a positive effect on economic growth, it requires a considerable amount of time to manifest, likely due to lag effects.
+R&D expenditure is known to have a positive relationship with a country's Total Factor Productivity (TFP) (Zhou&Xia, 2010). However, it is understood that the increase in TFP takes considerable time, leading to long-term growth in a country's GDP/GNI due to the lag effect of TFP. Since this study analyzed the relationship between R&D expenditure and economic growth for each year, it is not immune to the influence of such lag effects. 
+In this research, the results of Models 1 and 2 have already indicated that the relationship between R&D expenditure and GNI/GDP growth is not significant. In addition,the negative relationship between nominal share and GDP growth is identified. the results of these three models collectively prove that there is no positive year-by-year relationship between R&D expenditure and economic growth, possibly due to lag effects. Moreover, Canada ranks 6th in the OECD, indicating a high convergence rate. This further underscores that while R&D investment may have a positive effect on economic growth, it requires a considerable amount of time to manifest, likely due to lag effects.
 
 ## Possible problems in Resource allocations
-
+The negative relationship between R&D and economic growth revealed in Model 3 of this study may imply issues with the allocation of R&D investment in Canada, beyond just the influence of lag effects. R&D investment involves not only government but also various companies and enterprises. Moreover, the diversity of investor types leads to the allocation of R&D investment across various industries. However, despite this diversity in investment portfolios, changes in R&D allocation may occur annually or quarterly, and concentration in certain industries may negatively impact economic growth.
+Conversely, the diversity of investment portfolios may also have a negative impact on economic growth. Canada's productivity declined in 2023, with 10 out of 12 quarters experiencing a decrease (Canadian Chamber of Commerce, 2024). This decline in productivity, coupled with the negative relationship between R&D and economic growth, suggests issues with the allocation of R&D investment in Canada.
+Potential solutions include investigating the R&D expenditure and investment levels in each sector to focus investment on industries that can drive the country's growth, or adjusting the annual or quarterly R&D investment portfolio with investment diversity if needed.
+To achieve this, proactive intervention in government R&D allocation and advocacy for investment in industries requiring diverse investments may be necessary.
 
 
 ## Relevant Literature
+The research, "The Relationship Between Research & Development Expenditures and Economic Growth: The Case of Turkey" (Kadir, Emir & Hakan, 2015), investigated the relationship between R&D expenditure and economic growth using data from Turkey spanning from 1990 to 2013. In detail, Unit root tests, cointegration tests, and Granger’s causality tests were conducted, and the results indicated no significant relationship between R&D expenditure and economic growth. Furthermore, the causality tests revealed no causal relationship betweem them.
+In the study by Kadir, Emir & Hakan, the lack of relationship was attributed to the characteristics of Turkey as a country and the lag effect of R&D, which is consistent with the conclusions of this study. So, what does this study imply? The answer can be found in the conclusions mentioned in the previous study. Kadir, Emir & Hakan emphasized the importance of considering both short-term and long-term outcomes of R&D investments. Therefore, R&D investment should be approached with consideration for both quantitative and qualitative standards, and this may necessitate changes in national policies.
 
-## Weaknesses and next steps
+## Weaknesses and Next Steps
+As mentioned earlier, a weakness of this study lies in exploring the relationship between annual growth and R&D expenditure. Typically, scientific research and development unfold over long periods, making it challenging to predict the accurate timing of the result. For this reason, the relationship between annual growth and scientific investment may not exist, or it might indicate unforeseen directions. Moreover, the realm of R&D investment is vast, encompassing industries not only in general health or labor but also spanning a wide array of scientific fields. However, our study did not differentiate the industries where R&D expenditure was invested but instead aggregated them all to explore their relationship with national growth.
+In future research, I would like to delve into segmenting the areas where R&D expenditure is allocated to investigate whether R&D investment in each industry sector contributes to its growth. Furthermore, it is desirable to measure the time it takes for R&D investment to benefit specific industries' growth. This would involve measuring the pace of industrial growth attributable to R&D investment in each sector.
 
-Weaknesses and next steps should also be included.
 
 \newpage
 
 # References
+---
+nocite: '@*'
+...
